@@ -7,15 +7,15 @@ import readInput
 class Day01Test {
 
     @Test
-    fun `Find the Elf carrying the most Calories`() {
-        val caloriesFinder = ElfCaloriesFinder(readInput("resources/Day01.input"))
-        Assert.assertEquals(9000, caloriesFinder.findTotalCalories().first())
+    fun `What is the sum of all of the calibration values?`() {
+        val trebuchet = Trebuchet(readInput("test/kotlin/resources/Day01.input"))
+        Assert.assertEquals(142, trebuchet.calibrationValuesSum())
     }
 
     @Test
-    fun `Find the top three Elves carrying the most Calories`() {
-        val caloriesFinder = ElfCaloriesFinder(readInput("resources/Day01.input"))
-        Assert.assertEquals(20000, caloriesFinder.findTotalCalories().slice(0..2).sum())
+    fun `What is the real sum of all of the calibration values?`() {
+        val trebuchet = Trebuchet(readInput("test/kotlin/resources/Day01Part2.input"))
+        Assert.assertEquals(281, trebuchet.realCalibrationValuesSum())
     }
 
 }

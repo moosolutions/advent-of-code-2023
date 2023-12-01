@@ -3,15 +3,15 @@ package aoc.day1
 import readInput
 
 /*
---- Day 1: Calorie Counting ---
+--- Day 1: Trebuchet ---
  */
 fun main() {
     val input = readInput("main/kotlin/resources/Day01.input")
-    val caloriesFinder = ElfCaloriesFinder(input)
-    val totalCalories = caloriesFinder.findTotalCalories()
-    println("How many total Calories is that Elf carrying? "
-            + totalCalories.first())
+    val trebuchet = Trebuchet(input)
+    val sum = trebuchet.calibrationValuesSum()
+    println("What is the sum of all of the calibration values? "
+            + sum)
 
-    println("How many Calories are those Elves carrying in total? "
-            + totalCalories.take(3).sum())
+    println("What is the real sum of all of the calibration values? "
+            + trebuchet.realCalibrationValuesSum())
 }
